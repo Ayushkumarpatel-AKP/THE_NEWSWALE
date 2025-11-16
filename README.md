@@ -37,7 +37,16 @@ cd newswale
 npm install
 ```
 
-3. Start development server:
+3. Setup environment variables:
+```bash
+cp .env.example .env
+```
+Then edit `.env` file and add your NewsData.io API key:
+```
+VITE_NEWS_API_KEY=your_actual_api_key_here
+```
+
+4. Start development server:
 ```bash
 npm run dev
 ```

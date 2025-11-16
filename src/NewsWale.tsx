@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 
-const API_KEY = 'pub_00b879d4f21747a3b45373899c2bf476';
+const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 const API_BASE_URL = 'https://newsdata.io/api/1/news';
 
 interface NewsDataResponse {
