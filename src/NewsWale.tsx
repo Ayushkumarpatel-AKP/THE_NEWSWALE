@@ -355,7 +355,7 @@ const NewsWale: React.FC = () => {
           ) : error ? (
             '⚠️ NEWS FEED OFFLINE... ⚠️ RECONNECTING... ⚠️ STANDBY... '
           ) : (
-            `🔥 LIVE: ${articles.length} STORIES 🔥 REAL-TIME NEWS 🔥 ${selectedCategory.toUpperCase()} ACTIVE 🔥 FROM RAIPUR 🔥`
+            `🔥 LIVE: ${articles.length} STORIES 🔥 REAL-TIME NEWS 🔥 ${selectedCategory.toUpperCase()} ACTIVE 🔥 FROM WORLD🔥`
           )}
         </div>
       </div>
