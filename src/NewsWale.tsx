@@ -834,7 +834,7 @@ const NewsWale: React.FC = () => {
             </div>
           </div>
           <div className="border-t border-gray-600 mt-6 pt-6 text-center">
-            <p className="font-mono text-sm">© 2023-2025 NewsWale • Made in Raipur, Chhattisgarh</p>
+            <p className="font-mono text-sm">© 2025-2026 NewsWale • Made in Raipur, Chhattisgarh</p>
             <p className="font-mono text-xs mt-2 text-retro-gold">
               "Real News, Real Time, Raipur Style!"
             </p>
