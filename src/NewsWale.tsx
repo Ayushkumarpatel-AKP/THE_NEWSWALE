@@ -321,9 +321,9 @@ const NewsWale: React.FC = () => {
               📰 THE NEWSWALE 📰
             </h1>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 text-sm md:text-lg font-mono">
-              <span className="nw-retro-badge px-2 py-1 text-xs md:text-sm">EST. 2023</span>
+              <span className="nw-retro-badge px-2 py-1 text-xs md:text-sm">EST. 2024</span>
               <span className="hidden sm:inline">•</span>
-              <span className="italic text-sm md:text-base">"Raipur's Own News Portal"</span>
+              <span className="italic text-sm md:text-base">"AKP Own News Portal"</span>
               <span className="hidden sm:inline">•</span>
               <span className="nw-dateline text-xs md:text-sm">CHHATTISGARH EDITION</span>
             </div>
