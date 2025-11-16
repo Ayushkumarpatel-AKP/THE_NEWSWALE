@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Times:wght@400;700&family=Georgia:wght@400;700&family=Garamond:wght@400;700&family=Courier+New:wght@400;700&family=Impact:wght@400;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Times', 'Times New Roman', serif;
+  background: #e8e8e8;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,.02) 2px,
+      rgba(0,0,0,.02) 4px
+    );
+}
+
+/* Authentic 90s NewsWale styling */
+.nw-paper-texture {
+  background: linear-gradient(135deg, #f5f5dc 0%, #f0f0f0 50%, #e8e8e8 100%);
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(0,0,0,0.05) 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 15px 15px, 10px 10px;
+  border: 3px solid #333;
+  box-shadow: 
+    inset 0 0 20px rgba(0,0,0,0.1),
+    0 8px 16px rgba(0,0,0,0.2);
+}
+
+.nw-retro-gradient {
+  background: linear-gradient(
+    135deg, 
+    #ff6b6b 0%, 
+    #4ecdc4 25%, 
+    #45b7d1 50%, 
+    #96ceb4 75%, 
+    #ffeaa7 100%
+  );
+  background-size: 300% 300%;
+  animation: nw-gradient-shift 8s ease infinite;
+}
+
+@keyframes nw-gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.nw-90s-border {
+  border: 4px outset #c0c0c0;
+  background: linear-gradient(145deg, #f0f0f0, #d8d8d8);
+  box-shadow: 
+    4px 4px 8px rgba(0,0,0,0.3),
+    inset 1px 1px 0 rgba(255,255,255,0.8),
+    inset -1px -1px 0 rgba(0,0,0,0.2);
+}
+
+.nw-90s-button {
+  border: 3px outset #c0c0c0;
+  background: linear-gradient(145deg, #e8e8e8, #d0d0d0);
+  box-shadow: 
+    2px 2px 4px rgba(0,0,0,0.4),
+    inset 1px 1px 0 rgba(255,255,255,0.9);
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.nw-90s-button:hover {
+  background: linear-gradient(145deg, #f0f0f0, #d8d8d8);
+  transform: translateY(-1px);
+}
+
+.nw-90s-button:active {
+  border: 3px inset #c0c0c0;
+  box-shadow: 
+    inset 2px 2px 4px rgba(0,0,0,0.3),
+    1px 1px 2px rgba(0,0,0,0.2);
+  transform: translateY(1px);
+}
+
+.nw-marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg, 
+    #ff0000 0%, 
+    #ff4500 25%, 
+    #ff8c00 50%, 
+    #ff4500 75%, 
+    #ff0000 100%
+  );
+  background-size: 200% 100%;
+  animation: nw-bg-scroll 3s linear infinite;
+  color: #ffff00;
+  font-weight: bold;
+  text-shadow: 
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+@keyframes nw-bg-scroll {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
+.nw-marquee-inner {
+  display: inline-block;
+  padding-left: 100%;
+  animation: nw-marquee-scroll 20s linear infinite;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 2px;
+}
+
+@keyframes nw-marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.nw-90s-header {
+  background: linear-gradient(
+    135deg, 
+    #2c3e50 0%, 
+    #3498db 30%, 
+    #5dade2 70%, 
+    #85c1e9 100%
+  );
+  border-bottom: 6px solid #1a252f;
+  box-shadow: 
+    0 6px 12px rgba(0,0,0,0.4),
+    inset 0 2px 0 rgba(255,255,255,0.2);
+  position: relative;
+}
+
+.nw-90s-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      rgba(255,255,255,0.05) 1px,
+      transparent 2px
+    );
+}
+
+.nw-london-title {
+  font-family: 'Times', 'Georgia', serif;
+  font-weight: bold;
+  text-shadow: 
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+  letter-spacing: 3px;
+}
+
+.nw-category-tab {
+  border: 3px outset #b8b8b8;
+  background: linear-gradient(145deg, #e0e0e0, #c8c8c8);
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  margin-right: 3px;
+  margin-bottom: 2px;
+  transition: all 0.15s;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nw-category-tab:hover {
+  background: linear-gradient(145deg, #f0f0f0, #d8d8d8);
+  transform: translateY(-2px);
+}
+
+.nw-category-tab.active {
+  background: linear-gradient(145deg, #ffd700, #ffed4a);
+  border: 3px inset #b8b8b8;
+  color: #2c3e50;
+  font-weight: 900;
+  box-shadow: 
+    inset 2px 2px 4px rgba(0,0,0,0.2),
+    0 4px 8px rgba(255,215,0,0.4);
+}
+
+.nw-article-card {
+  background: linear-gradient(145deg, #ffffff, #f8f8f8);
+  border: 3px solid #333;
+  box-shadow: 
+    6px 6px 12px rgba(0,0,0,0.3),
+    inset 1px 1px 0 rgba(255,255,255,0.8);
+  transition: all 0.2s;
+}
+
+.nw-article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    8px 12px 16px rgba(0,0,0,0.4),
+    inset 1px 1px 0 rgba(255,255,255,0.8);
+}
+
+.nw-london-heading {
+  font-family: 'Georgia', 'Times', serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Modern arrangement with 90s aesthetics */
+.nw-featured-article {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border: 4px solid #2c3e50;
+  box-shadow: 
+    8px 8px 16px rgba(0,0,0,0.3),
+    inset 2px 2px 0 rgba(255,255,255,0.8);
+}
+
+.nw-retro-badge {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  border: 2px solid #333;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 90s Tear Effects */
+.nw-torn-edge {
+  position: relative;
+}
+
+.nw-torn-edge::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 8px,
+    #000 8px,
+    #000 12px
+  );
+  mask: polygon(
+    0% 0%,
+    8% 100%,
+    16% 0%,
+    24% 100%,
+    32% 0%,
+    40% 100%,
+    48% 0%,
+    56% 100%,
+    64% 0%,
+    72% 100%,
+    80% 0%,
+    88% 100%,
+    96% 0%,
+    100% 100%,
+    100% 0%
+  );
+}
+
+/* 90s Paper Texture Enhanced */
+.nw-paper-vintage {
+  background-color: #f4f1e8;
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(139, 69, 19, 0.15) 2px, transparent 2px),
+    radial-gradient(circle at 75px 75px, rgba(160, 82, 45, 0.08) 1px, transparent 1px),
+    linear-gradient(45deg, rgba(222, 184, 135, 0.15) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(210, 180, 140, 0.15) 25%, transparent 25%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.02) 2px,
+      rgba(0, 0, 0, 0.02) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 69, 19, 0.03) 2px,
+      rgba(139, 69, 19, 0.03) 4px
+    );
+  background-size: 50px 50px, 100px 100px, 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+}
+
+/* 90s Vintage Stains */
+.nw-vintage-stains {
+  position: relative;
+}
+
+.nw-vintage-stains::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 30px;
+  height: 20px;
+  background: radial-gradient(ellipse, rgba(139, 69, 19, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.nw-vintage-stains::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle, rgba(101, 67, 33, 0.25) 0%, transparent 60%);
+  border-radius: 50%;
+}
+
+/* 90s Typewriter Effect */
+.nw-typewriter {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+.nw-typewriter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 1px,
+    rgba(0, 0, 0, 0.05) 1px,
+    rgba(0, 0, 0, 0.05) 2px
+  );
+  pointer-events: none;
+}
+
+/* 90s Grunge Border */
+.nw-grunge-border {
+  border: 4px solid #2c1810;
+  box-shadow: 
+    inset 0 0 20px rgba(139, 69, 19, 0.3),
+    0 0 0 2px #8b4513,
+    0 0 0 4px #654321,
+    0 8px 16px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.nw-grunge-border::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(45deg, transparent 30%, rgba(139, 69, 19, 0.1) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 90s Metallic Text Effect */
+.nw-metallic-text {
+  background: linear-gradient(
+    45deg,
+    #2c1810 0%,
+    #8b4513 25%,
+    #daa520 50%,
+    #8b4513 75%,
+    #2c1810 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 90s Distressed Button */
+.nw-distressed-btn {
+  background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+  border: 3px solid #2c1810;
+  box-shadow: 
+    inset 2px 2px 4px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.nw-distressed-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+  transition: left 0.5s ease;
+}
+
+.nw-distressed-btn:hover::before {
+  left: 100%;
+}
+
+/* Authentic 90s scrollbar */
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(145deg, #e0e0e0, #c8c8c8);
+  border: 2px inset #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(145deg, #d0d0d0, #a8a8a8);
+  border: 2px outset #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(145deg, #d8d8d8, #b0b0b0);
+}
+
+/* Retro modal styling */
+.nw-modal {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border: 4px solid #333;
+  box-shadow: 
+    0 0 0 2px #c0c0c0,
+    8px 8px 24px rgba(0,0,0,0.5);
+}
+
+/* London newspaper typography */
+.nw-byline {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #555;
+}
+
+.nw-dateline {
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* 90s color scheme */
+.nw-teal { color: #008080; }
+.nw-purple { color: #800080; }
+.nw-lime { color: #00ff00; }
+.nw-cyan { color: #00ffff; }
+.nw-magenta { color: #ff00ff; }
