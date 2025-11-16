@@ -1,7 +1,11 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 
-const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+const API_KEY = import.meta.env.VITE_NEWS_API_KEY || 'pub_00b879d4f21747a3b45373899c2bf476';
 const API_BASE_URL = 'https://newsdata.io/api/1/news';
+
+// Debug: Check if environment variable is loaded
+console.log('Environment API Key:', import.meta.env.VITE_NEWS_API_KEY ? 'Loaded from .env' : 'Using fallback');
+console.log('API Key length:', API_KEY?.length || 'undefined');
 
 interface NewsDataResponse {
   status: string;
